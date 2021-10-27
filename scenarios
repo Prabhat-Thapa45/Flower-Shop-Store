@@ -1,0 +1,38 @@
+while adding flower quantity in stock
+
+User has liberty to give in any type of data.
+if user gives float, string or less than one like [0, -1, "2", 3.2] then the input is rejected
+Also the user is expected to give values within [1 <= value <=200]
+
+[adding new flower in stock]
+Here user can give flower name, quantity and price similarly the data can come in any format and it
+only accepts data for valid int and float values.
+
+if user gives existing flower name then quantity is added and price is updated.
+
+
+[Taking order part]
+Takes bouquet size first
+while taking input from user we use same module to handle input and only valid int type is accepted.
+
+
+[Adding flowers to cart]
+Here also only valid int data type is expected within the constraint of [1 <= value <=200] and item is added to
+your cart. The bouquet size is subtracted by valid order quantity given. Meanwhile availability of stock is also
+considered.
+
+invalid data are rejected
+
+
+[cancel]
+If you want to cancel your order than the data in stock is cleared.
+
+
+[Go_to_cart]
+To go to cart you must order the amount of flowers equal to bouquet size given previously
+here checking criteria is used and if bouquet size is finally zero then only we can proceed to cart
+
+
+[Buy]
+Here you are shown the total cost and your orders once you click here your stock is updated and items in your cart
+is removed

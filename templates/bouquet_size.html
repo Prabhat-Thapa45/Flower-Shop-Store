@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% include 'includes/_navbar.html' %}
+{% block body %}
+    <form action="" method="post">
+        <h4>Enter Bouquet Size:</h4>
+        <br>
+        <input type="text" name="bouquet_size" value="{{request.form.bouquet_size}}">
+        <button type="submit" class="btn btn-primary">Confirm</button>
+    </form>
+    <a href="/menu"><input type="button" class="btn btn-primary" value="Menu"></a>
+{% endblock %}

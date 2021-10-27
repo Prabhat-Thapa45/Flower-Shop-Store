@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% include 'includes/_navbar.html' %}
+{% block body %}
+      <table class="table table-striped">
+          <tr>
+              <td><a href="menu/add_flower"><input type="submit" value="Add Flower" class="btn btn-primary"></a></td>
+              <td><a href="menu/bouquet_size"><input type="submit" value="Purchase Flower" class="btn btn-primary"></a></td>
+              <form action="{{url_for('go_to_cart')}}" method ='post'>
+                  <td><button type="submit"  class="btn btn-primary">Go to Cart</button></td>
+              </form>
+          </tr>
+      </table>
+{% endblock %}

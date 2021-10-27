@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% include 'includes/_navbar.html' %}
+{% block body %}
+
+<div class="form-group">
+    <hr>
+    <table class="table table-striped">
+        <tr>
+            <th>Flower</th>
+            <th>Rate</th>
+            <th>Order quantity</th>
+            <th></th>
+            <th></th>
+        </tr>
+        {% for item in items %}
+        <tr><form name="add" action="{{url_for('add_to_cart')}}" method="post">
+            <td>{{item.flower_name}}</td>
+            <td>{{item.price}}</td>
+            <td><input type="text" name="number"></td>
+            <input type="hidden" name="in_stock" value="{{item.quantity}}">
+            <input type="hidden" name="price" value="{{item.price}}">
+            <input type="hidden" name="flower_name" value={{item.flower_name}}>
+            <td> <button type="submit" class="btn btn-primary">Add to Cart</button></td>
+            </form>
+        </tr>
+        {% endfor %}
+
+    </table>
+    <form name="cart" action="{{url_for('go_to_cart')}}" method="post">
+        <button type="submit"  class="btn btn-primary">Go to Cart</button>
+    </form>
+      <form name="cart" action="{{url_for('cancel_order')}}" method="post">
+        <button type="submit"  class="btn btn-primary">Cancel</button>
+    </form>
+</div>
+{% endblock %}
+
